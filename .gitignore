@@ -1,0 +1,5 @@
+node_modules
+/output
+/server
+template/index.jade
+template/images/*

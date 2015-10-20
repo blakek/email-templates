@@ -23,7 +23,7 @@ gulp.task('templates', function () {
   }
 
   gulp.src('template/index.jade')
-    .pipe(jade(jadeOpts))
+    .pipe(jade(jadeOpts).on('error', (err) => console.log(err.message) ))
     .pipe(inlineCss())
     .pipe(gulp.dest('output'))
     .pipe(gulp.dest('server'))

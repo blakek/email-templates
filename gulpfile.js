@@ -2,8 +2,8 @@ var gulp = require('gulp')
   , zip = require('gulp-zip')
   , jade = require('gulp-jade')
   , fs = require('fs')
-  , connect = require('gulp-connect')
   , inlineCss = require('gulp-inline-css')
+  , browserSync = require('browser-sync').create()
 
 gulp.task('zip-images', function () {
   var imageGlob = 'template/images/*'
@@ -12,7 +12,7 @@ gulp.task('zip-images', function () {
     .pipe(gulp.dest('server/images/'))
     .pipe(zip('images.zip'))
     .pipe(gulp.dest('output'))
-    .pipe(connect.reload())
+    .pipe(browserSync.stream())
 })
 
 gulp.task('templates', function () {
@@ -27,13 +27,14 @@ gulp.task('templates', function () {
     .pipe(inlineCss())
     .pipe(gulp.dest('output'))
     .pipe(gulp.dest('server'))
-    .pipe(connect.reload())
+    .pipe(browserSync.stream())
 })
 
 gulp.task('watch', function () {
-  connect.server({
-    root: 'server',
-    livereload: true
+  browserSync.init({
+    server: {
+      baseDir: './server/'
+    }
   })
 
   gulp.watch('template/*', ['templates'])

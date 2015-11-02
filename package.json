@@ -10,8 +10,8 @@
   "author": "Blake Knight <oss.ideas@gmail.com> (http://blakek.me)",
   "license": "MIT",
   "dependencies": {
+    "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
-    "gulp-connect": "^2.2.0",
     "gulp-inline-css": "^3.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-zip": "^3.0.2"

@@ -4,7 +4,9 @@ var gulp = require('gulp')
   , fs = require('fs')
   , inlineCss = require('gulp-inline-css')
   , browserSync = require('browser-sync').create()
+  , replace = require('gulp-replace')
 
+/* Package all our image assets into a zip file (e.g. for Campaign Monitor) */
 gulp.task('zip-images', function () {
   var imageGlob = 'template/images/*'
 
@@ -15,21 +17,28 @@ gulp.task('zip-images', function () {
     .pipe(browserSync.stream())
 })
 
+/* Compile the email templates */
 gulp.task('templates', function () {
+  // Read template variables from JSON file
   var templateLocals = JSON.parse(fs.readFileSync('template/variables.json'))
+  var retainedStyles = fs.readFileSync('template/reset-retain.css')
+
   var jadeOpts = {
     locals: templateLocals,
-    pretty: true
+    pretty: true // Don't minify output
   }
 
   gulp.src('template/index.jade')
     .pipe(jade(jadeOpts).on('error', (err) => console.log(err.message) ))
     .pipe(inlineCss())
+    .pipe(replace('$retainedStyles', `<style>${retainedStyles}</style>`))
+    .pipe(replace(/\/\*.*?\*\//g, '')) // Strip out comments
     .pipe(gulp.dest('output'))
     .pipe(gulp.dest('server'))
     .pipe(browserSync.stream())
 })
 
+/* Run a development server */
 gulp.task('watch', function () {
   browserSync.init({
     server: {

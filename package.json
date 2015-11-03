@@ -14,6 +14,7 @@
     "gulp": "^3.9.0",
     "gulp-inline-css": "^3.0.0",
     "gulp-jade": "^1.1.0",
+    "gulp-replace": "^0.5.4",
     "gulp-zip": "^3.0.2"
   }
 }

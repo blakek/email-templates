@@ -1,4 +1,11 @@
 {
 	"title": "Hunt Brothers&reg; Pizza",
-	"contentWidth": 650
+	"previewText": "",
+
+	"backdropColor": "#ddd",
+	"backgroundColor": "#fff",
+	"baseFontColor": "#445",
+
+	"baseFontFamily": "Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif",
+	"headingFontFamily": "Georgia, serif"
 }

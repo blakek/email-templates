@@ -1,0 +1,66 @@
+/* Styles in this file are kept in <style> tags (not inlined) */
+
+/* Media Queries */
+@media screen and (max-device-width: 600px), screen and (max-width: 600px) {
+  /* What it does: Overrides email-container's desktop width and forces it into a 100% fluid width. */
+  .email-container {
+    width: 100% !important;
+  }
+
+  /* What it does: Forces images to resize to the width of their container. */
+  img[class="fluid"], img[class="fluid-centered"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: auto !important;
+  }
+
+  /* And center justify these ones. */
+  img[class="fluid-centered"] {
+    margin: auto !important;
+  }
+
+  /* What it does: Forces table cells into full-width rows. */
+  td[class="stack-column"], td[class="stack-column-center"] {
+    display: block !important;
+    width: 100% !important;
+    direction: ltr !important;
+  }
+
+  /* And center justify these ones. */
+  td[class="stack-column-center"] {
+    text-align: center !important;
+  }
+
+  /* Data Table Styles */
+  /* What it does: Hides table headers */
+  td[class="data-table-th"] {
+    display: none !important;
+  }
+
+  /* What it does: Change the look and layout of the remaining td's */
+  td[class="data-table-td"], td[class="data-table-td-title"] {
+    display: block !important;
+    width: 100% !important;
+    border: 0 !important;
+  }
+
+  /* What it does: Changes the appearance of the first td in each row */
+  td[class="data-table-td-title"] {
+    font-weight: bold;
+    color: #333333;
+    padding: 10px 0 0 0 !important;
+    border-top: 2px solid #eeeeee !important;
+  }
+
+  /* What it does: Changes the appearance of the other td's in each row */
+  td[class="data-table-td"] {
+    padding: 5px 0 0 0 !important
+  }
+
+  /* What it does: Provides a visual divider between table rows. In this case, a bit of extra space. */
+  td[class="data-table-mobile-divider"] {
+    display: block !important;
+    height: 20px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Reset email client styles as best as possible */
+
+/* What it does: Remove spaces around the email design added by some email clients.
+   Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Forces Outlook.com to display emails full width. */
+.ExternalClass {
+  width: 100%;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+  border-spacing: 0 !important;
+}
+
+/* What it does: Fixes Outlook.com line height. */
+.ExternalClass, .ExternalClass * {
+  line-height: 100%;
+}
+
+/* What it does: Fix for Yahoo mail table alignment bug. */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+.yshortcuts a {
+  border-bottom: none !important;
+}
+
+/* What it does: Overrides blue, underlined link auto-detected by iOS Mail.
+   Create a class for every link style needed; this template needs only one for
+   the link in the footer. */
+.mobile-link--footer a {
+  color: #666666 !important;
+}
+
+/* What it does: Overrides styles added images. */
+img {
+  border: 0 !important;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+/* Shows text will appear in the inbox preview, but not the email body */
+.hiddenPreview {
+  display: none;
+  font-size: 1px;
+  line-height: 1px;
+  max-height: 0px;
+  max-width: 0px;
+  opacity: 0;
+  overflow: hidden;
+  mso-hide: all;
+}
+
+.fluid-row {
+  padding: 4%;
+  line-height: 1.3;
+}

@@ -2,26 +2,48 @@ doctype transitional
 html(xmlns="http://www.w3.org/1999/xhtml")
 head
 	meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+	//- Forcing initial-scale shouldn't be necessary
+	meta(name="viewport" content="width=device-width")
+	//- Use the latest (edge) version of IE rendering engine
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
 	title !{title}
+	link(rel='stylesheet' href='reset.css')
 	link(rel='stylesheet' href='style.css')
+	
+	| $retainedStyles
 
-body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" border="0")
-	table.body-wrap(border="0" cellpadding="0" cellspacing="0")
+body(leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" border="0" bgcolor="#{backdropColor}")
+	table(border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" bgcolor="#{backdropColor}" style="border-collapse:collapse;")
 		tr
-			td.container(style="max-width: #{contentWidth}px;")
-				table.content(border="0" cellpadding="0" cellspacing="0" style="max-width: #{contentWidth}px;")
-					tr
-						td
-							table(width="100%" border="0" cellpadding="0" cellspacing="0")
-								block content
-
-								//- Footer
-								tr
-									td(align="center")
-										a(href="http://www.huntbrotherspizza.com/mediakit")
-											img(src="/images/bottom-banner.jpg" alt="Visit the NACS online media romm at huntbrotherspizza.com/mediakit with the password NACS2015")
-
-								tr(bgcolor="#272727")
-									td(height="30" align="center")
-										font(color="#ffffff" size="2")
-											| Is this email not displaying correctly? Try the <webversion><font color="#ffffff"><u>web version</u></font></webversion>. Not interested anymore? <unsubscribe><font color="#ffffff"><u>Unsubscribe instantly</u></font></unsubscribe>.</font></td>
+			td
+				//- (Optional) This text will appear in the inbox preview, but not the email body.
+				if previewText
+					.hiddenPreview= previewText
+				
+				//- Email content wrapper
+				table.email-container(border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="width:600px; margin: auto;")
+					tr: td
+						
+						//- SECTION: Logo + link
+						//- table(border='0', width='100%', cellpadding='0', cellspacing='0')
+						//- 	tr: td(height='5', style='font-size: 0; line-height: 0;')  
+						//- 	tr
+						//- 		td.stack-column-center(valign='middle', width='150', style='padding:5px 0; text-align:left; line-height: 1;')
+						//- 			img(src='http://placehold.it/150x50', alt='alt text', width='150', height='50', border='0', style='display: block; margin: auto;')
+						//- 		td.stack-column-center(valign='middle', style='padding:5px 0; text-align:right; line-height:1.1; font-family: sans-serif; font-size: 13px; color: #999999;')
+						//- 			| A mobile-friendly template with media queries.
+						//- 	tr: td(height='5', style='font-size: 0; line-height: 0;')
+							
+						//- *** Email body ***
+						table(border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#{backgroundColor}" style="background-color: #fff")
+							block content
+							
+							//- Footer
+							tr(bgcolor="#272727")
+								td(style='text-align:center; padding:4% 0; font-family:sans-serif; font-size:13px; line-height:1.2; color:#ccc;')
+									| Is this email not displaying correctly? Try the
+									webversion(style='color:#ccc; text-decoration:underline;') web version
+									| .
+									| Not interested anymore? 
+									unsubscribe(style='color:#ccc; text-decoration:underline;') Unsubscribe instantly
+									| .

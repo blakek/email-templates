@@ -1,11 +1,15 @@
 {
-	"title": "Hunt Brothers&reg; Pizza",
+	"title": "Title goes here",
 	"previewText": "",
 
 	"backdropColor": "#ddd",
 	"backgroundColor": "#fff",
-	"baseFontColor": "#445",
 
+	"brandPrimary": "#004B85",
+
+	"baseFontColor": "#464646",
+	"mutedFontColor": "#606971",
+	"contrastingFontColor": "#f0f0f0",
 	"baseFontFamily": "Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif",
 	"headingFontFamily": "Georgia, serif"
 }

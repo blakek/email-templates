@@ -2,15 +2,15 @@ extends layout
 
 block content
 	//- Branded header
-	tr(bgcolor="#272727")
-		td(style='text-align:center; padding:4%; font-family:sans-serif; font-size:13px; line-height:1.2; color:#eee;')
+	tr(bgcolor="#{brandPrimary}")
+		td(style='text-align:center; padding:4%; font-family:sans-serif; font-size:13px; line-height:1.2; color:#{contrastingFontColor};')
 			table(border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr")
 				tr
 					td.stack-column-center(valign="top" width="160" dir="ltr")
 						img(src="http://placehold.it/160x80" alt="alt text" width="160" height="80" border="0" align="center")
-					
+
 					td.stack-column(width="4%" height="4%") &nbsp;
-					
+
 					td.stack-column(valign="top")
 						table(border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr")
 							tr
@@ -23,7 +23,7 @@ block content
 	//- Fluid hero image
 	tr: td(valign="middle" align="center")
 		img(src="http://placehold.it/600x300" alt="alt text" height="300" width="600" align="center" border="0" style="margin: auto;" class="fluid")
-	
+
 	//- Full-width text column
 	tr: td.fluid-row(style="font-family: #{baseFontFamily}; color: #{baseFontColor}")
 		| Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -37,7 +37,7 @@ block content
 						//- First column
 						td.stack-column(valign="top" width="48%" style="padding: 4% 0; font-family: #{baseFontFamily}; color: #{baseFontColor};")
 							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-						
+
 						td.stack-column(width="4%" height="4%") &nbsp;
 
 						//- Second column
@@ -62,10 +62,10 @@ block content
 							//- Button example
 							table(cellspacing="0" cellpadding="0" border="0" align="center" class="button" style="margin: auto;")
 								tr
-									td(style="border-radius: 3px; background: #222222; text-align: center;")
-										a(href="http://www.google.com" style="background: #222222; border: 15px solid #222222; padding: 0 10px; color: #ffffff; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px;")
+									td(style="border-radius: 3px; background: #{brandPrimary}; text-align: center;")
+										a(href="http://www.google.com" style="background: #{brandPrimary}; border: 15px solid #{brandPrimary}; padding: 0 10px; color: #{contrastingFontColor}; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px;")
 											b<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-						
+
 						td.stack-column(width="4%" height="4%") &nbsp;
 
 						//- Second column
@@ -79,8 +79,8 @@ block content
 							//- Button example
 							table(cellspacing="0" cellpadding="0" border="0" align="center" class="button" style="margin: auto;")
 								tr
-									td(style="border-radius: 3px; background: #222222; text-align: center;")
-										a(href="http://www.google.com" style="background: #222222; border: 15px solid #222222; padding: 0 10px; color: #ffffff; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px;")
+									td(style="border-radius: 3px; background: #{brandPrimary}; text-align: center;")
+										a(href="http://www.google.com" style="background: #{brandPrimary}; border: 15px solid #{brandPrimary}; padding: 0 10px; color: #{contrastingFontColor}; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px;")
 											b<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
 
 	//- Thumbnail + text
@@ -89,14 +89,14 @@ block content
 			tr
 				td.stack-column-center(valign="top" width="160" dir="ltr")
 					img(src="http://placehold.it/160" alt="alt text" height="160" width="160" border="0" align="center")
-				
+
 				td.stack-column(width="4%" height="4%") &nbsp;
-				
+
 				td.stack-column-center(valign="top" style="font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #{baseFontColor}; text-align: left;" dir="ltr")
 					| Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo.
 					br
 					br
-					| Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+					| Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 	//- Text + thumbnail
 	tr: td(style="padding: 4%;")
@@ -106,10 +106,10 @@ block content
 					| Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo.
 					br
 					br
-					| Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-					
+					| Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
 				td.stack-column(width="4%" height="4%") &nbsp;
-				
+
 				td.stack-column-center(valign="top" width="160" dir="ltr")
 					img(src="http://placehold.it/160" alt="alt text" height="160" width="160" border="0" align="center")
 
@@ -130,7 +130,7 @@ block content
 					| 1-Jan-2014
 				td.data-table-td(valign='top', align='left', style='padding: 10px 0; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #{baseFontColor}; border-bottom: 1px solid #eeeeee')
 					| New York, NY
-				td.data-table-mobile-divider(style='display: none;')  
+				td.data-table-mobile-divider(style='display: none;')
 			tr
 				td.data-table-td-title(valign='top', align='left', style='padding: 10px 0; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #{baseFontColor}; border-bottom: 1px solid #eeeeee')
 					| Another Name
@@ -138,7 +138,7 @@ block content
 					| 8-Jul-2014
 				td.data-table-td(valign='top', align='left', style='padding: 10px 0; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #{baseFontColor}; border-bottom: 1px solid #eeeeee')
 					| Phoenix, AZ
-				td.data-table-mobile-divider(style='display: none;')  
+				td.data-table-mobile-divider(style='display: none;')
 			tr
 				td.data-table-td-title(valign='top', align='left', style='padding: 10px 0; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #{baseFontColor}; border-bottom: 1px solid #eeeeee')
 					| A Third Name
@@ -147,20 +147,20 @@ block content
 				td.data-table-td(valign='top', align='left', style='padding: 10px 0; font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #{baseFontColor}; border-bottom: 1px solid #eeeeee')
 					| Seattle, WA
 				td.data-table-mobile-divider(style='display: none;')
-	
+
 	//- Plain footer
-	tr(bgcolor="#272727")
-		td(style='text-align:center; padding:4% 0; font-family:sans-serif; font-size:13px; line-height:1.2; color:#ccc;')
+	tr(bgcolor="#{brandPrimary}")
+		td(style='text-align:center; padding:4% 0; font-family:sans-serif; font-size:13px; line-height:1.2; color:#{contrastingFontColor};')
 			| Is this email not displaying correctly? Try the
-			webversion(style='color:#ccc; text-decoration:underline;') web version
+			webversion(style='color:#{contrastingFontColor}; text-decoration:underline;') web version
 			| .
-			| Not interested anymore? 
-			unsubscribe(style='color:#ccc; text-decoration:underline;') Unsubscribe instantly
+			| Not interested anymore?
+			unsubscribe(style='color:#{contrastingFontColor}; text-decoration:underline;') Unsubscribe instantly
 			| .
-			
+
 	//- //- Branded footer
-	//- tr(bgcolor="#272727")
-	//- 	td(style='text-align:center; padding:4%; font-family:sans-serif; font-size:13px; line-height:1.2; color:#ccc;')
+	//- tr(bgcolor="#{brandPrimary}")
+	//- 	td(style='text-align:center; padding:4%; font-family:sans-serif; font-size:13px; line-height:1.2; color:#{contrastingFontColor};')
 	//- 		table(border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr")
 	//- 			tr
 	//- 				td
@@ -174,9 +174,9 @@ block content
 	//- 								img(src="http://placehold.it/40x40" alt="alt text" width="40" height="40" border="0" align="left")
 	//- 							td.stack-column-center(valign="top" width="66" dir="ltr")
 	//- 								img(src="http://placehold.it/40x40" alt="alt text" width="40" height="40" border="0" align="left")
-	//- 				
+	//-
 	//- 				td.stack-column(width="4%" height="4%") &nbsp;
-	//- 				
+	//-
 	//- 				td.stack-column-center(valign="top" style="font-family: #{baseFontFamily}; font-size: 15px; line-height: 1.3; color: #eeeeee; text-align: left;" dir="ltr")
 	//- 					| Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit.
 	//- 					br
@@ -186,6 +186,6 @@ block content
 	//- 					br
 	//- 					table
 	//- 						tr
-	//- 							td(width="33%"): unsubscribe(style='color:#ccc; text-decoration:underline;') Unsubscribe
-	//- 							td(width="33%"): a(href="#" style='color:#ccc; text-decoration:underline;') Privacy Policy
-	//- 							td(width="33%"): a(href="#" style='color:#ccc; text-decoration:underline;') Manage Emails
+	//- 							td(width="33%"): unsubscribe(style='color:#{contrastingFontColor}; text-decoration:underline;') Unsubscribe
+	//- 							td(width="33%"): a(href="#" style='color:#{contrastingFontColor}; text-decoration:underline;') Privacy Policy
+	//- 							td(width="33%"): a(href="#" style='color:#{contrastingFontColor}; text-decoration:underline;') Manage Emails

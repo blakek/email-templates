@@ -1,9 +1,10 @@
 {
 	"title": "Title goes here",
 	"previewText": "",
+	"emailWidth": "600",
 
-	"backdropColor": "#ddd",
-	"backgroundColor": "#fff",
+	"backdropColor": "#dddddd",
+	"backgroundColor": "#ffffff",
 
 	"brandPrimary": "#004B85",
 

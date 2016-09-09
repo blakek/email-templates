@@ -1,16 +1,15 @@
-var gulp = require('gulp')
-  , zip = require('gulp-zip')
-  , jade = require('gulp-jade')
-  , fs = require('fs')
-  , inlineCss = require('gulp-inline-css')
-  , browserSync = require('browser-sync').create()
-  , replace = require('gulp-replace')
+const browserSync = require('browser-sync').create()
+const fs = require('fs')
+const gulp = require('gulp')
+const handlebars = require('gulp-compile-handlebars')
+const inlineCss = require('gulp-inline-css')
+const rename = require('gulp-rename');
+const replace = require('gulp-replace')
+const zip = require('gulp-zip')
 
 /* Package all our image assets into a zip file (e.g. for Campaign Monitor) */
 gulp.task('zip-images', function () {
-  var imageGlob = 'template/images/*'
-
-  gulp.src(imageGlob)
+  gulp.src('src/images/*')
     .pipe(gulp.dest('server/images/'))
     .pipe(zip('images.zip'))
     .pipe(gulp.dest('output'))
@@ -20,19 +19,21 @@ gulp.task('zip-images', function () {
 /* Compile the email templates */
 gulp.task('templates', function () {
   // Read template variables from JSON file
-  var templateLocals = JSON.parse(fs.readFileSync('template/variables.json'))
-  var retainedStyles = fs.readFileSync('template/reset-retain.css')
-
-  var jadeOpts = {
-    locals: templateLocals,
-    pretty: true // Don't minify output
+  const templateLocals = JSON.parse(fs.readFileSync('src/variables.json'))
+  const retainedStyles = fs.readFileSync('src/reset-retain.css')
+  const compileOptions = {
+    batch: ['src/partials']
   }
 
-  gulp.src('template/index.jade')
-    .pipe(jade(jadeOpts).on('error', (err) => console.log(err.message) ))
+  gulp.src('src/index.hbs')
+    .pipe(
+      handlebars(templateLocals, compileOptions)
+        .on('error', (err) => console.log(err.message))
+    )
     .pipe(inlineCss())
     .pipe(replace('$retainedStyles', `<style>${retainedStyles}</style>`))
-    .pipe(replace(/\/\*.*?\*\//g, '')) // Strip out comments
+    .pipe(replace(/\/\*.*?\*\//g, '')) // Strip out CSS comments
+    .pipe(rename('index.html'))
     .pipe(gulp.dest('output'))
     .pipe(gulp.dest('server'))
     .pipe(browserSync.stream())
@@ -46,8 +47,8 @@ gulp.task('watch', function () {
     }
   })
 
-  gulp.watch('template/*', ['templates'])
-  gulp.watch('template/images/*', ['zip-images'])
+  gulp.watch('src/*', ['templates'])
+  gulp.watch('src/images/*', ['zip-images'])
 })
 
 gulp.task('build', ['templates', 'zip-images'])

@@ -5,6 +5,7 @@ const handlebars = require('gulp-compile-handlebars')
 const inlineCss = require('gulp-inline-css')
 const rename = require('gulp-rename');
 const replace = require('gulp-replace')
+const variables = require('./src/variables');
 const zip = require('gulp-zip')
 
 /* Package all our image assets into a zip file (e.g. for Campaign Monitor) */
@@ -18,8 +19,6 @@ gulp.task('zip-images', function () {
 
 /* Compile the email templates */
 gulp.task('templates', function () {
-  // Read template variables from JSON file
-  const templateLocals = JSON.parse(fs.readFileSync('src/variables.json'))
   const retainedStyles = fs.readFileSync('src/reset-retain.css')
   const compileOptions = {
     batch: ['src/partials']
@@ -27,7 +26,7 @@ gulp.task('templates', function () {
 
   gulp.src('src/index.hbs')
     .pipe(
-      handlebars(templateLocals, compileOptions)
+      handlebars(variables, compileOptions)
         .on('error', (err) => console.log(err.message))
     )
     .pipe(inlineCss())

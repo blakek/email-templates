@@ -1,18 +1,16 @@
+{{#if text_button}}
 <tr>
   <td class="fluid-row" style="font-family: {{ baseFontFamily }}; color: {{ baseFontColor }}; background-color: {{ backgroundAltColor }}">
-    Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit,
-    urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus
-    et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas.
-
+    {{text_button.text}}
     <table class="button" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
       <tr>
         <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center">
-          <a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px">
-            <b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b>
+          <a href="{{text_button.button.link}}" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px">
+            <b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{text_button.button.text}}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b>
           </a>
         </td>
       </tr>
     </table>
   </td>
 </tr>
+{{/if}}

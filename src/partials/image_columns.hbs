@@ -1,3 +1,4 @@
+{{#if image_columns}}
 <tr>
   <td>
     <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
@@ -5,20 +6,19 @@
         <td style="padding: 0 4%">
           <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
             <tr>
-              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: center"><img src="http://placehold.it/160" alt="alt text" width="160" height="160" border="0" align="center" /><br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br/><br/>
+              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: center"><img src="{{image_columns.column1.image.src}}" alt="{{image_columns.column1.image.alt_text}}" width="160" height="160" border="0" align="center" /><br/><br/>{{image_columns.column1.text}}<br/><br/>
                 <table class="button" cellspacing="0"
                   cellpadding="0" border="0" align="center" style="margin: auto">
                   <tr>
-                    <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
+                    <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="{{image_columns.column1.button.link}}" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{image_columns.column1.button.text}}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
                   </tr>
                 </table>
               </td>
               <td class="stack-column" width="4%" height="4%">&nbsp;</td>
-              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: center"><img src="http://placehold.it/160" alt="alt text" width="160" height="160" border="0" align="center" /><br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br/><br/>
-                <table class="button" cellspacing="0"
+              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: center"><img src="{{image_columns.column2.image.src}}" alt="{{image_columns.column2.image.alt_text}}" width="160" height="160" border="0" align="center" /><br/><br/>{{image_columns.column2.text}}<br/><br/>                <table class="button" cellspacing="0"
                   cellpadding="0" border="0" align="center" style="margin: auto">
                   <tr>
-                    <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
+                    <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="{{image_columns.column2.button.link}}" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{image_columns.column2.button.text}}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
                   </tr>
                 </table>
               </td>
@@ -29,3 +29,4 @@
     </table>
   </td>
 </tr>
+{{/if}}

@@ -12,5 +12,94 @@ module.exports = {
 	contrastingFontColor: '#f0f0f0',
 
 	baseFontFamily: 'Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif',
-	headingFontFamily: 'Georgia, serif'
+	headingFontFamily: 'Georgia, serif',
+
+	header: {
+		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+		img: 'http://placehold.it/160x80',
+		date: 'December 2, 2015'
+	},
+
+	image: {
+		src: 'http://placehold.it/600x300',
+		alt_text: 'alt text'
+	},
+
+	image_columns: {
+		column1: {
+			image: {
+				src: 'http://placehold.it/160',
+				alt_text: 'alt text column 1'
+			},
+			text: 'Column1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+			button: {
+				link: 'http://google.com',
+				text: 'A Button Column 1'
+			}
+		},
+		column2: {
+			image: {
+				src: 'http://placehold.it/160',
+				alt_text: 'alt text column 2'
+			},
+			text: 'Column2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+			button: {
+				link: 'http://google.com',
+				text: 'A Button Column 2'
+			}
+		},
+	},
+
+	text_basic: 'Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+
+	text_button: {
+		text: 'Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+		button: {
+			link: 'http://google.com',
+			text: 'A Button!'
+		}
+	},
+
+	text_call_to_action: {
+		text: 'Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+		button: {
+			link: 'http://google.com',
+			text: 'This is a call to action!'
+		}
+	},
+
+	text_columns: {
+		column1: 'Column1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
+		column2: 'Column2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+	},
+
+	data_table: {
+		headers: ['Name', 'Date', 'Location'],
+		data: [
+			['Event Name', '1-Jan-2014', 'New York, NY'],
+			['Another Name', '8-Jul-2014', 'Phoenix, AZ'],
+			['A Third Name', '21-Dec-2014', 'Seattle, WA']
+		]
+	},
+
+	footer: {
+		unsubsribe: 'Unsubcribe Instantly',
+		webversion: 'web version',
+	},
+
+	text_with_left_image: {
+		text: 'Left Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+		image: {
+			src: 'http://placehold.it/160',
+			alt_text: 'alt text'
+		}
+	},
+
+	text_with_right_image: {
+		text: 'Right Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+		image: {
+			src: 'http://placehold.it/160',
+			alt_text: 'alt text'
+		}
+	}
 }

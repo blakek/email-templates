@@ -11,14 +11,13 @@ image: {
   alt_text: '...'
 }
 ```
----
 
 ## header
 
 A simple header with text, image and date
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | text | header text | string | Lorem Ipsum |
 | image.src | header image source | link | /images/header_image.png |
 | image.alt_text | header image alt text | string | header image |
@@ -30,7 +29,7 @@ A simple header with text, image and date
 A main image, spanning across the width of the page
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | src | image source | link | /images/main_image.png |
 | alt_text | image alt text | string | this is an image |
 
@@ -40,7 +39,7 @@ A main image, spanning across the width of the page
 Two columns with image, text and a button
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | column1.text | text in column 1 | string | Lorem Ipsum |
 | column1.image.src | column 1 image source | string | /images/col1_image.png |
 | column1.image.alt_text | column 1 image alt text | string | col 1 image |
@@ -58,14 +57,14 @@ Two columns with image, text and a button
 A basic text block
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | text | simple text | string | Lorem Ipsum |
 
 
 ## text_button
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | text | simple text | string | Lorem Ipsum |
 | button.link | button link | link | http://google.com |
 | button.text | button text | string | A Button! |
@@ -76,7 +75,7 @@ A basic text block
 A highlighted text block with a highlighted button
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | text | simple text | string | Lorem Ipsum |
 | button.link | button link | link | http://google.com |
 | button.text | button text | string | We Must Act! |
@@ -87,7 +86,7 @@ A highlighted text block with a highlighted button
 Two columns with text
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | column1.text | text in column 1 | string | Lorem Ipsum |
 | column2.text | text in column 2 | string | Lorem Ipsum |
 
@@ -97,7 +96,7 @@ Two columns with text
 Text block with image on the left
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | text | text | string | Lorem Ipsum |
 | image.src | image source | link | /images/image.png |
 | image.alt_text | image alt text | string | left image |
@@ -108,7 +107,7 @@ Text block with image on the left
 Text block with image on the right
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | text | text | string | Lorem Ipsum |
 | image.src | image source | link | /images/image.png |
 | image.alt_text | image alt text | string | right image |
@@ -116,7 +115,7 @@ Text block with image on the right
 
 ## data_table
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | headers | items in the table header row |array of strings | ['Name', 'Date', 'Location'] |
 | data | rows in the table | array of array of strings | [ ['Event Name', '1-Jan-2014', 'New York, NY'], ['Another Name', '8-Jul-2014', 'Phoenix, AZ'], ['A Third Name', '21-Dec-2014', 'Seattle, WA'] ] |
 
@@ -126,6 +125,6 @@ Text block with image on the right
 A simple footer
 
 | param | description | type | example |
-| -- | -- | -- | -- |
+| --- | --- | --- | --- |
 | unsubscribe | unsubscribe text | string | Unsubscribe Instantly! |
 | webversion | webversion text | string | Desktop Version |

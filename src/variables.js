@@ -75,8 +75,12 @@ module.exports = {
 	},
 
 	text_columns: {
-		column1: 'Column1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
-		column2: 'Column2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+		column1: {
+			text: 'Column1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+		},
+		column2: {
+			text: 'Column2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+		}
 	},
 
 	text_with_left_image: {

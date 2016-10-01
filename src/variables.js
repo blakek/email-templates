@@ -54,7 +54,9 @@ module.exports = {
 		},
 	},
 
-	text_basic: 'Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+	text_basic: {
+		text: 'Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
+	},
 
 	text_button: {
 		text: 'Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',

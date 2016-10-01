@@ -14,22 +14,26 @@ module.exports = {
 	baseFontFamily: 'Trebuchet MS, Helvetica Neue, Helvetica, Arial, sans-serif',
 	headingFontFamily: 'Georgia, serif',
 
+	/* the next keys correspond to the pre-made sections/partials */
 	header: {
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-		img: 'http://placehold.it/160x80',
+		image: {
+			src: 'http://placehold.it/160x80',
+			alt_text: 'header image'
+		},
 		date: 'December 2, 2015'
 	},
 
 	image: {
 		src: 'http://placehold.it/600x300',
-		alt_text: 'alt text'
+		alt_text: 'main image'
 	},
 
 	image_columns: {
 		column1: {
 			image: {
 				src: 'http://placehold.it/160',
-				alt_text: 'alt text column 1'
+				alt_text: 'column 1 image'
 			},
 			text: 'Column1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
 			button: {
@@ -40,7 +44,7 @@ module.exports = {
 		column2: {
 			image: {
 				src: 'http://placehold.it/160',
-				alt_text: 'alt text column 2'
+				alt_text: 'column 2 image'
 			},
 			text: 'Column2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.',
 			button: {
@@ -73,6 +77,22 @@ module.exports = {
 		column2: 'Column2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
 	},
 
+	text_with_left_image: {
+		text: 'Left Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+		image: {
+			src: 'http://placehold.it/160',
+			alt_text: 'text with image on left'
+		}
+	},
+
+	text_with_right_image: {
+		text: 'Right Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+		image: {
+			src: 'http://placehold.it/160',
+			alt_text: 'text with image on right'
+		}
+	},
+
 	data_table: {
 		headers: ['Name', 'Date', 'Location'],
 		data: [
@@ -86,20 +106,4 @@ module.exports = {
 		unsubsribe: 'Unsubcribe Instantly',
 		webversion: 'web version',
 	},
-
-	text_with_left_image: {
-		text: 'Left Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-		image: {
-			src: 'http://placehold.it/160',
-			alt_text: 'alt text'
-		}
-	},
-
-	text_with_right_image: {
-		text: 'Right Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-		image: {
-			src: 'http://placehold.it/160',
-			alt_text: 'alt text'
-		}
-	}
 }

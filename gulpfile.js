@@ -1,11 +1,11 @@
 const browserSync = require('browser-sync').create()
 const fs = require('fs')
 const gulp = require('gulp')
+const reload = require('require-reload')(require)
 const handlebars = require('gulp-compile-handlebars')
 const inlineCss = require('gulp-inline-css')
 const rename = require('gulp-rename');
-const replace = require('gulp-replace')
-const variables = require('./src/variables');
+const replace = require('gulp-replace');
 const zip = require('gulp-zip')
 
 /* Package all our image assets into a zip file (e.g. for Campaign Monitor) */
@@ -19,6 +19,7 @@ gulp.task('zip-images', function () {
 
 /* Compile the email templates */
 gulp.task('templates', function () {
+  const variables = reload('./src/variables')
   const retainedStyles = fs.readFileSync('src/reset-retain.css')
   const compileOptions = {
     batch: ['src/partials']
@@ -46,7 +47,7 @@ gulp.task('watch', function () {
     }
   })
 
-  gulp.watch('src/*', ['templates'])
+  gulp.watch(['src/*', 'src/partials/*'], ['templates'])
   gulp.watch('src/images/*', ['zip-images'])
 })
 

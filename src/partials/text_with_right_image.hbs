@@ -1,0 +1,13 @@
+{{#if text_with_right_image}}
+<tr>
+  <td style="padding: 4%">
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr">
+      <tr>
+        <td class="stack-column-center" valign="top" style="font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: left" dir="ltr">{{text_with_right_image.text}}</td>
+        <td class="stack-column" width="4%" height="4%">&nbsp;</td>
+        <td class="stack-column-center" valign="top" width="160" dir="ltr"><img src="{{text_with_right_image.image.src}}" alt="{{text_with_right_image.image.alt_text}}" width="160" height="160" border="0" align="center" /></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+{{/if}}

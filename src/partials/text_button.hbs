@@ -1,0 +1,16 @@
+{{#if text_button}}
+<tr>
+  <td class="fluid-row" style="font-family: {{ baseFontFamily }}; color: {{ baseFontColor }}; background-color: {{ backgroundAltColor }}">
+    {{text_button.text}}
+    <table class="button" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
+      <tr>
+        <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center">
+          <a href="{{text_button.button.link}}" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px">
+            <b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{text_button.button.text}}<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+{{/if}}

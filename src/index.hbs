@@ -1,192 +1,25 @@
-{{> start}}
+{{> start }}
 
-<tr bgcolor="{{ brandPrimary }}">
-  <td style="text-align:center; padding:4%; font-family:{{ headingFontFamily }}; font-size:13px; line-height:1.2; color:{{ contrastingFontColor }}">
-    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr">
-      <tr>
-        <td class="stack-column-center" valign="top" width="160" dir="ltr"><img src="http://placehold.it/160x80" alt="alt text" width="160" height="80" border="0" align="center" /></td>
-        <td class="stack-column" width="4%" height="4%">&nbsp;</td>
-        <td class="stack-column" valign="top">
-          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr">
-            <tr>
-              <td class="stack-column" align="left">
-                <p style="font-size:18px; font-weight:bold; margin:0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </td>
-            </tr>
-            <tr>
-              <td class="stack-column" align="right">December 2, 2015</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+{{> header }}
 
-<tr>
-  <td valign="middle" align="center"><img class="fluid" src="http://placehold.it/{{ emailWidth }}x300" alt="alt text" width="{{ emailWidth }}" height="300" align="center" border="0" style="margin: auto" /></td>
-</tr>
+{{> image }}
 
-<tr>
-  <td class="fluid-row" style="font-family: {{ baseFontFamily }}; color: {{ baseFontColor }}">
-    Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit,
-    urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus
-    et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas.
-  </td>
-</tr>
+{{> text_basic }}
 
-<tr>
-  <td class="fluid-row" style="font-family: {{ baseFontFamily }}; color: {{ contrastingFontColor }}; background-color: {{ brandPrimary }}">
-    Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit,
-    urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus
-    et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas.
-    <br/><br/>
+{{> text_call_to_action }}
 
-    <table class="button" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
-      <tr>
-        <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 1px solid {{ backgroundAltColor }}; padding: 15px 25px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->This is a call to action<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
-      </tr>
-    </table>
-  </td>
-</tr>
+{{> text_button }}
 
-<tr>
-  <td class="fluid-row" style="font-family: {{ baseFontFamily }}; color: {{ baseFontColor }}; background-color: {{ backgroundAltColor }}">
-    Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit,
-    urna diam mollis libero, vitae gravida nisi lectus in leo. Aenean eu ligula id nisi euismod dapibus
-    et eu mauris. Donec quis dictum velit. Pellentesque habitant morbi tristique senectus et netus et
-    malesuada fames ac turpis egestas.
+{{> text_columns }}
 
-    <table class="button" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto">
-      <tr>
-        <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center">
-          <a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px">
-            <b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b>
-          </a>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+{{> image_columns }}
 
-<tr>
-  <td>
-    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
-      <tr>
-        <td style="padding: 0 4%">
-          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
-            <tr>
-              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; color: {{ baseFontColor }}">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-              </td>
+{{> text_with_left_image }}
 
-              <td class="stack-column" width="4%" height="4%">&nbsp;</td>
+{{> text_with_right_image }}
 
-              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; color: {{ baseFontColor }}">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+{{> data_table }}
 
-<tr>
-  <td>
-    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
-      <tr>
-        <td style="padding: 0 4%">
-          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
-            <tr>
-              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: center"><img src="http://placehold.it/160" alt="alt text" width="160" height="160" border="0" align="center" /><br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br/><br/>
-                <table class="button" cellspacing="0"
-                  cellpadding="0" border="0" align="center" style="margin: auto">
-                  <tr>
-                    <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
-                  </tr>
-                </table>
-              </td>
-              <td class="stack-column" width="4%" height="4%">&nbsp;</td>
-              <td class="stack-column" valign="top" width="48%" style="padding: 4% 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: center"><img src="http://placehold.it/160" alt="alt text" width="160" height="160" border="0" align="center" /><br/><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.<br/><br/>
-                <table class="button" cellspacing="0"
-                  cellpadding="0" border="0" align="center" style="margin: auto">
-                  <tr>
-                    <td style="border-radius: 3px; background: {{ brandPrimary }}; text-align: center"><a href="http://www.google.com" style="background: {{ brandPrimary }}; border: 15px solid {{ brandPrimary }}; padding: 0 10px; color: {{ contrastingFontColor }}; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1; text-align: center; text-decoration: none; display: block; border-radius: 3px"><b><!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->A Button<!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></b></a></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+{{> footer }}
 
-<tr>
-  <td style="padding: 4%">
-    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr">
-      <tr>
-        <td class="stack-column-center" valign="top" width="160" dir="ltr"><img src="http://placehold.it/160" alt="alt text" width="160" height="160" border="0" align="center" /></td>
-        <td class="stack-column" width="4%" height="4%">&nbsp;</td>
-        <td class="stack-column-center" valign="top" style="font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: left" dir="ltr">Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo.<br/><br/>Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-<tr>
-  <td style="padding: 4%">
-    <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" dir="ltr">
-      <tr>
-        <td class="stack-column-center" valign="top" style="font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; text-align: left" dir="ltr">Ulla nec est tristique, tempor lacus eu, aliquam erat. Cras tristique, arcu ac tristique hendrerit, urna diam mollis libero, vitae gravida nisi lectus in leo.<br/><br/>Aenean eu ligula id nisi euismod dapibus et eu mauris. Donec quis dictum velit.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</td>
-        <td class="stack-column" width="4%" height="4%">&nbsp;</td>
-        <td class="stack-column-center" valign="top" width="160" dir="ltr"><img src="http://placehold.it/160" alt="alt text" width="160" height="160" border="0" align="center" /></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-<tr>
-  <td width="92%" style="padding: 4%">
-    <table cellspacing="0" cellpadding="0" border="0" width="100%">
-      <tr>
-        <td class="data-table-th" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; font-weight: bold; border-bottom: 1px solid #cccccc">Name</td>
-        <td class="data-table-th" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; font-weight: bold; border-bottom: 1px solid #cccccc">Date</td>
-        <td class="data-table-th" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; font-weight: bold; border-bottom: 1px solid #cccccc">Location</td>
-      </tr>
-      <tr>
-        <td class="data-table-td-title" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">Event Name</td>
-        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">1-Jan-2014</td>
-        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">New York, NY</td>
-        <td class="data-table-mobile-divider" style="display: none"></td>
-      </tr>
-      <tr>
-        <td class="data-table-td-title" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">Another Name</td>
-        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">8-Jul-2014</td>
-        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">Phoenix, AZ</td>
-        <td class="data-table-mobile-divider" style="display: none"></td>
-      </tr>
-      <tr>
-        <td class="data-table-td-title" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">A Third Name</td>
-        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">21-Dec-2014</td>
-        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ baseFontColor }}; border-bottom: 1px solid #eeeeee">Seattle, WA</td>
-        <td class="data-table-mobile-divider" style="display: none"></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-<tr bgcolor="{{ brandPrimary }}">
-  <td style="text-align:center; padding:4% 0; font-family:{{ baseFontFamily }}; font-size:13px; line-height:1.2; color:{{ contrastingFontColor }}">Is this email not displaying correctly? Try the
-    <webversion style="color:{{ contrastingFontColor }}; text-decoration:underline">web version</webversion>. Not interested anymore?
-    <unsubscribe style="color:{{ contrastingFontColor }}; text-decoration:underline">Unsubscribe instantly</unsubscribe>.</td>
-</tr>
-
-{{> end}}
+{{> end }}

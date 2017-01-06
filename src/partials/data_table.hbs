@@ -1,0 +1,26 @@
+{{#if data_table}}
+<tr>
+  <td width="92%" style="padding: 4%">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+      {{#if data_table.headers}}
+      <tr>
+        {{#each data_table.headers}}
+        <td class="data-table-th" valign="top" align="left" style="padding: 10px 0; font-family: {{ ../baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ ../baseFontColor }}; font-weight: bold; border-bottom: 1px solid #cccccc">{{this}}</td>
+        {{/each}}
+      </tr>
+      {{/if}}
+
+      {{#if data_table.data}}
+      {{#each data_table.data}}
+      <tr>
+        {{#each this}}
+        <td class="data-table-td" valign="top" align="left" style="padding: 10px 0; font-family: {{ ../../baseFontFamily }}; font-size: 15px; line-height: 1.3; color: {{ ../../baseFontColor }}; border-bottom: 1px solid #eeeeee">{{this}}</td>
+        {{/each}}
+        <td class="data-table-mobile-divider" style="display: none"></td>
+      </tr>
+      {{/each}}
+      {{/if}}
+    </table>
+  </td>
+</tr>
+{{/if}}
